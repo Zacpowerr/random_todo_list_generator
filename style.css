@@ -1,0 +1,76 @@
+body,
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+/** Header */
+header img {
+  width: 200px;
+  height: 200px;
+}
+header nav p {
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+nav a,
+nav a:visited {
+  color: black;
+}
+/** Body */
+.content {
+  padding-bottom: 50px;
+  min-height: 100vh;
+  align-items: center;
+}
+table {
+  margin: auto;
+  width: 50%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px;
+}
+.form button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 10%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+}
+.form input {
+  margin-top: 10px;
+  border-radius: 10px;
+  border-color: black;
+  font-weight: 900;
+  font-size: large;
+}
+
+/** Footer */
+footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  text-align: center;
+  color: white;
+  height: 50px;
+  padding: 2px;
+  margin-top: -50px;
+}
+footer p {
+  font-weight: bold;
+}
