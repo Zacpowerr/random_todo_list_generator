@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random to do list generator JS</title>
+    <title>Home - Todo list</title>
     <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../main.js" defer></script>
   </head>
   <body>
     <header>
@@ -17,7 +18,7 @@
           <a href="./about.html">About</a>
         </p>
         <p>
-          <a href="./shores.html">Shores</a>
+          <a href="./chores.html">Chores</a>
         </p>
       </nav>
       <h1>Welcome to the random to do list generator</h1>
@@ -26,32 +27,43 @@
         alt="to do list"
       />
     </header>
-    <article class="content">
-      <section class="purpose">
+    <section class="content">
+      <article class="purpouse">
         <h3>Do you have nothing to do?</h3>
         <p>
           You came to the right place. <br />
-          This is a simple application to generate a random list of shores for
+          This is a simple application to generate a random list of chores for
           you to do around your house. <br />
           Just input the amount of items you want in your list and
           <b>BOOM</b> we`ll tell you what to do next.
         </p>
         <p>
-          You can also view and change the default shores if you have any better
-          shores than ours by clicking <a href="./shores">here</a>.
+          You can also view and change the default chores if you have any better
+          chores than ours by clicking <a href="./chores">here</a>.
         </p>
-      </section>
-      <section class="form">
-        <form action="#" method="get">
-          <input type="number" name="amount" id="amount" />
-          <br />
-          <button type="submit">Generate</button>
-        </form>
-      </section>
-      <section class="about">
+      </article>
+      <article class="form">
+        <input type="number" name="amount" id="amount" />
+        <br />
+        <button type="button" id="generate-btn">Generate</button>
+      </article>
+      <article class="table-result">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="1">#</th>
+              <th scope="col" colspan="2">Chore name</th>
+            </tr>
+          </thead>
+          <tbody id="chore-table">
+            <tr></tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="about">
         <h2>About</h2>
         <p>
-          This is a simple JS application to generate a random list of shores.
+          This is a simple JS application to generate a random list of chores.
         </p>
         <p>
           You can find out more about the project and
@@ -59,8 +71,8 @@
           going to the
           <a href="./about">About page</a>
         </p>
-      </section>
-    </article>
+      </article>
+    </section>
     <footer>
       <p>
         Created by
