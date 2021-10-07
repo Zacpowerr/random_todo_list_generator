@@ -18,7 +18,7 @@ header h1 {
   margin-left: 10px;
 }
 
-header nav p {
+header nav li {
   display: inline-block;
   margin-right: 50px;
   margin-left: 50px;
@@ -29,7 +29,7 @@ nav a:visited {
 }
 /** Body */
 table {
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
 }
 table,
@@ -39,15 +39,31 @@ td {
   text-align: center;
   padding: 2px;
 }
+.new-chore {
+  display: block;
+  margin: 5px 25%;
+}
+.return-default {
+  display: block;
+  margin: 5px 25%;
+}
+.add-chore {
+  margin: 0 25%;
+  display: block;
+  text-align: start;
+  display: none;
+}
 .form button {
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
-  height: 40px;
+  padding: 10px;
+  width: 150px;
   background-color: black;
   color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .form input {
   margin-top: 10px;
@@ -58,6 +74,10 @@ td {
 }
 .table-result {
   display: none;
+}
+.content {
+  box-sizing: border-box;
+  padding-bottom: 70px;
 }
 .about {
   padding-bottom: 50px;

@@ -1,22 +1,28 @@
-const choresList = [
-  "Make bed",
-  "Bush teeth",
-  "Take a shower",
-  "Do the dishes",
-  "Organize bedroom",
-  "Organize desk",
-  "Organize living room",
-  "Organize kitchen",
-  "Clean bedroom",
-  "Clean desk",
-  "Clean living room",
-  "Clean kitchen",
-  "Cook dinner",
-  "Checkin with parents",
-  "Do the laundry",
-  "Fold laundry",
-  "Study for exam",
-];
+let choresList = [];
+const refreshList = () => {
+  choresList = localStorage.getItem("choresList")
+    ? JSON.parse(localStorage.getItem("choresList"))
+    : [
+        "Make bed",
+        "Bush teeth",
+        "Take a shower",
+        "Do the dishes",
+        "Organize bedroom",
+        "Organize desk",
+        "Organize living room",
+        "Organize kitchen",
+        "Clean bedroom",
+        "Clean desk",
+        "Clean living room",
+        "Clean kitchen",
+        "Cook dinner",
+        "Checkin with parents",
+        "Do the laundry",
+        "Fold laundry",
+        "Study for exam",
+      ];
+  localStorage.setItem("choresList", JSON.stringify(choresList));
+};
 let todoList = [];
 
 const generateRandomTodoList = (choreNum = 3) => {
@@ -44,43 +50,4 @@ const generateRandomIndex = (except = null) => {
   return index === except ? generateRandomIndex(index) : index;
 };
 
-const populateChoreTable = () => {
-  let tbody = document.getElementById("chore-table");
-  choresList.forEach((chore, index) => {
-    let tr = document.createElement("tr");
-    let tdId = document.createElement("td");
-    tdId.setAttribute("colspan", 1);
-    tdId.textContent = index + 1;
-    let tdName = document.createElement("td");
-    tdName.setAttribute("colspan", 2);
-    tdName.textContent = chore;
-    tr.append(tdId, tdName);
-    tbody.append(tr);
-  });
-};
-
-let pageTitle = document.title;
-if (pageTitle === "Chores - To do list") {
-  populateChoreTable();
-}
-let btn = document.getElementById("generate-btn");
-btn.addEventListener("click", () => {
-  let userInput = document.getElementById("amount");
-  generateRandomTodoList(userInput.value);
-  let article = document.getElementsByClassName("table-result")[0];
-  let tbody = document.getElementById("chore-table");
-  tbody.textContent = "";
-  todoList.forEach((chore, index) => {
-    article.style.display = "block";
-    let tr = document.createElement("tr");
-    let tdId = document.createElement("td");
-    tdId.setAttribute("colspan", "1");
-    tdId.textContent = index + 1;
-    let tdName = document.createElement("td");
-    tdName.setAttribute("colspan", "2");
-    tdName.textContent = chore;
-    tr.append(tdId, tdName);
-    tbody.append(tr);
-  });
-  todoList = [];
-});
+refreshList();

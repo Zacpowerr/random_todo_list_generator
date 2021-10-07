@@ -7,19 +7,23 @@
     <title>Chores - To do list</title>
     <link rel="stylesheet" href="../resources/styles/style.css" />
     <script src="../resources/js/main.js" defer></script>
+    <script src="../resources/js/populate-chores-table.js" defer></script>
+    <script src="../resources/js/chores-events.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
-        <p>
-          <a href="./index.html">Home</a>
-        </p>
-        <p>
-          <a href="./about.html">About</a>
-        </p>
-        <p>
-          <a href="./chores.html">Chores</a>
-        </p>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a href="./chores.html">Chores</a>
+          </li>
+        </ul>
       </nav>
       <h1>Chores page</h1>
       <img
@@ -27,7 +31,19 @@
         alt="to do list"
       />
     </header>
-    <article class="content">
+    <section class="content">
+      <div class="form">
+        <button class="new-chore" id="new-chore" type="button">
+          Add new item
+        </button>
+        <button class="return-default" id="return-default" type="button">
+          Default
+        </button>
+        <div class="add-chore">
+          <input type="text" placeholder="Name..." class="chore-input" />
+          <button id="chore-btn" class="chore-btn" type="button">Add</button>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -39,7 +55,7 @@
           <tr></tr>
         </tbody>
       </table>
-    </article>
+    </section>
     <footer>
       <p>
         Created by
@@ -47,5 +63,6 @@
         2021&copy
       </p>
     </footer>
+    <script src="../resources/js/add-chore.js"></script>
   </body>
 </html>
