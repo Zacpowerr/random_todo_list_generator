@@ -22,10 +22,12 @@ header nav {
 }
 header nav ul {
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 header nav li {
   display: inline-block;
-  margin: 0 10%;
+  margin: 0;
 }
 nav a,
 nav a:visited {
@@ -101,13 +103,15 @@ td {
 }
 /** Footer */
 footer {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
+  width: 100%;
   bottom: 0;
+  height: 50px;
   background-color: black;
   color: white;
-  height: 50px;
-  padding: 2px;
 }
 footer p {
   font-weight: bold;
