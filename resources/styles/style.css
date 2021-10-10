@@ -8,6 +8,13 @@ html {
 a {
   text-decoration: none;
 }
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
 /** Header */
 header {
   padding: 50px 0;
@@ -55,13 +62,10 @@ td {
   text-align: center;
   padding: 2px;
 }
-.new-chore {
+.new-chore,
+.return-default,
+.clear-list {
   display: block;
-  float: left;
-}
-.return-default {
-  display: block;
-  float: right;
 }
 .add-chore {
   display: block;

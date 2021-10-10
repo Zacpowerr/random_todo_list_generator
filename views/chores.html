@@ -33,12 +33,19 @@
     </header>
     <section class="content">
       <div class="form">
-        <button class="new-chore" id="new-chore" type="button">
-          Add new item
-        </button>
-        <button class="return-default" id="return-default" type="button">
-          Default
-        </button>
+        <div class="float-left">
+          <button class="new-chore" id="new-chore" type="button">
+            Add new item
+          </button>
+        </div>
+        <div class="float-right">
+          <button class="return-default" id="return-default" type="button">
+            Default
+          </button>
+          <button class="clear-list" id="clear-list" type="button">
+            Clear List
+          </button>
+        </div>
         <div class="add-chore">
           <input type="text" placeholder="Name..." class="chore-input" />
           <button id="chore-btn" class="chore-btn" type="button">Add</button>

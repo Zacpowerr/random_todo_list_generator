@@ -1,5 +1,5 @@
 const populateChoreTable = () => {
-  refreshList();
+  getDefaultList();
   let tbody = document.getElementById("chore-table");
   tbody.innerHTML = "";
   choresList.forEach((chore, index) => {

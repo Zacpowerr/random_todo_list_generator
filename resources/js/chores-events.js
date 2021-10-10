@@ -9,3 +9,9 @@ btnDefaultList.addEventListener("click", () => {
   localStorage.removeItem("choresList");
   populateChoreTable();
 });
+
+let btnCreateNewChoreList = document.getElementById("clear-list");
+btnCreateNewChoreList.addEventListener("click", () => {
+  localStorage.setItem("choresList", []);
+  populateChoreTable();
+});
