@@ -105,6 +105,37 @@ td {
 .about {
   padding-bottom: 50px;
 }
+aside {
+  display: flex;
+  float: right;
+  margin: 5%;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+}
+#intro,
+#experience,
+#roots,
+#socials {
+  width: 50%;
+  text-align: left;
+}
+
+#socials ul {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-around;
+}
+#socials ul li {
+  display: inline-block;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+.me {
+  width: 300px;
+}
 /** Footer */
 footer {
   display: flex;
