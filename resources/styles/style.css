@@ -108,7 +108,7 @@ td {
 aside {
   display: flex;
   float: right;
-  margin: 5%;
+  padding-left: 5%;
   width: 50%;
   justify-content: center;
   align-items: flex-start;
@@ -134,7 +134,8 @@ aside {
   height: 20px;
 }
 .me {
-  width: 300px;
+  max-width: 300px;
+  min-width: 100px;
 }
 /** Footer */
 footer {
@@ -158,5 +159,18 @@ footer p {
   }
   .chore-input {
     width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  aside {
+    display: none;
+  }
+  #intro,
+  #experience,
+  #roots,
+  #socials {
+    width: 100%;
+    text-align: center;
   }
 }
